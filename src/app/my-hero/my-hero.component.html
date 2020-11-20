@@ -26,16 +26,93 @@
       </div>
      
     </div>
+
+    <div class="dad">
+      <div class="child content">
+        <p class="title">Lorem ipsum </p>
+        <p class="subtitle">Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+      </div>
+      
+     <div class="child">
+        <div class="darikdiv">
+          <img src="../../assets/img/hero/1.jpg" class="img">
+        </div>
+      </div>
+    </div>
+
+    <div class="level statistics columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd is-gapless">
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">customer</p>
+          <p class="title">456K</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Following</p>
+          <p class="title">123</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Followers</p>
+          <p class="title">456K</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Likes</p>
+          <p class="title">789</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
 </div>
 
 <style>
- 
-.hero{
-    /* background-color: #273c75; */
+  .dad{
+  display: flex;
+  justify-content: space-around;
+    align-items: center;
+  }
+
+  .child.content{
+    width: 500px
+  }
+
+  .darikdiv{
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  .img{
+    position: absolute;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    right: 35px;
+    bottom: 35px;
+  }
+  .darikdiv{
+    width: 300px;
+    height: 500px;
+    background-color: #242f56;
+  }
+ .statistics{
+    background-size: contain;
+    color: #fff;
+    background-position: center center;
+    background-image: url('../../assets/img/hero/9.jpg');
+    padding: 35px 0;
+    margin-top: 25px;
+ }
+.statistics .title{
+  color: #fff;
 }
     .heroImg{
     height: 500px;
-    background-size: cover;
+    background-size: cover; 
     background-position: center center;
       box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
