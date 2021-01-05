@@ -1,0 +1,66 @@
+
+
+.btn {
+  margin: 50px 0 !important;
+}
+a {
+  text-decoration: none;
+}
+.contenir {
+  padding: 0 100px;
+}
+.price {
+  
+  
+  display: block;
+  margin-bottom: 10px;
+}
+.halfdev h1 {
+  padding-top: 100px;
+}
+.singleproduct {
+  /* border: 1px solid #000; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 65vh;
+}
+.singlimg {
+  /* border: 1px solid #000; */
+  height: 400px;
+  width: 500px;
+  margin-top: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 100px;
+}
+.singlecontent{
+  width: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  .singleproduct {
+    display: block;
+    text-align: center;
+  }
+  .singlimg {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background-size: cover;
+    height: 350px;
+    background-position: center center;
+  }
+  .halfdev h1 {
+    padding-top: 0;
+  }
+  .contenir {
+    padding: 0 15px;
+  }
+  .price {
+    font-size: 35px;
+    display: block;
+  }
+}

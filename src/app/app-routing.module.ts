@@ -8,12 +8,17 @@ import { MyHeroComponent } from './my-hero/my-hero.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/Home' , pathMatch: 'full'  },//this is home page
-  {path: 'shop', component: ProdactsComponent},
-  {path: 'shop/:id', component: ProdactsDetailComponent},
-  {path: 'Home', component: MyHeroComponent},
-  {path: 'cart', component: CartComponent},
-  {path: '**', component: PageNotFoundComponent}
+  { path: '', redirectTo: '/Home', pathMatch: 'full' },//this is home page
+  {
+    path: 'shop',
+
+
+    component: ProdactsComponent
+  },
+  { path: 'shop/:id', component: ProdactsDetailComponent },
+  { path: 'Home', component: MyHeroComponent },
+  { path: 'cart', component: CartComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -22,4 +27,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [ProdactsComponent,CartComponent,PageNotFoundComponent,MyHeroComponent,ProdactsDetailComponent]
+export const routingComponents = [ProdactsComponent, CartComponent, PageNotFoundComponent, MyHeroComponent, ProdactsDetailComponent]

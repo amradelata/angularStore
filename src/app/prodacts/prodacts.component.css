@@ -1,14 +1,34 @@
-.center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% ,-50%);
+.myshop{
+  padding-top: 50px;
 }
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+}
+.card {
+  width: calc(20% - 20px);
+  margin: 9px;
+  border: 1px solid #95afc0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  text-align: center;
+  padding: 5px 0;
+}
+.img {
+  height: 250px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* loding animation */
+
 .sk-chase {
   width: 40px;
   height: 40px;
   position: relative;
   animation: sk-chase 2.5s infinite linear both;
+  
 }
 
 .sk-chase-dot {
@@ -57,4 +77,24 @@
   } 100%, 0% {
     transform: scale(1.0); 
   } 
+}
+/* loding animation */
+/* taplet */
+@media screen and (min-width: 769px) and (max-width: 1215px) {
+  /* shop */
+  .cards {
+    width: 100%;
+  }
+  .card {
+    width: calc(100% - 20px);
+  }
+}
+@media screen and (max-width: 768px) {
+  /* shop */
+  .cards {
+    width: 100%;
+  }
+  .card {
+    width: calc(100% - 20px);
+  }
 }

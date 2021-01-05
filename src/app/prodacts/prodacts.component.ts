@@ -10,7 +10,6 @@ import { Prodact } from '../prodacts';
 })
 export class ProdactsComponent implements OnInit {
   prodacts: Prodact[] = [];
-  // public prodacts = [];
    error = [];
   loading = false;
   constructor(private _prodactsService: ProdactsService, private router: Router) {}
@@ -29,9 +28,6 @@ export class ProdactsComponent implements OnInit {
     )
   }
 
-    onSelect(item){
-    this.router.navigate(['/shop', item.id])
 
-  }
 
 }

@@ -1,0 +1,14 @@
+nav{
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: #f0ffff6e;
+    z-index: 9999;
+}
+a{
+    color: #000;
+    font-weight: bold;
+}
+a:hover{
+    color: rgb(63, 63, 63);
+}

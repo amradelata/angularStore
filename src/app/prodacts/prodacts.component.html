@@ -1,37 +1,37 @@
-<div class="center" *ngIf="prodacts.length === 0 && !loading;">No Data Found!</div>
+<div class="myshop">
+  <div class="center" *ngIf="prodacts.length === 0 && !loading;">No Data Found!</div>
 
-<ul>
-    
-   <h1> {{error}}</h1>
-    <li *ngFor= "
-    let item of prodacts" (click)="onSelect(item)">
-        <h5>{{item.id}}</h5>
-        <h5>{{item.name}}</h5>
-        <h5>{{item.price}}</h5>
-        
-    </li>
-</ul>
+  <!-- <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd  ">
 
-<div *ngIf="loading" class="center">
-  <div class="sk-chase">
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
+    <div class="column is-12">
+      <app-carousel></app-carousel>
+    </div>
+  </div> -->
+  <div class="cards">
+    <a [routerLink]="['/shop', item.id]" class="card" *ngFor="
+      let item of prodacts">
+      <!-- <a > -->
+      <div class="img" [ngStyle]="{'backgroundImage':'url('+item.img_url+')'}"></div>
+      <div class="shopcontent">
+        <p class="is-size-5">{{ item.name }}</p>
+
+        <p class="is-size-5 has-text-info">{{ item.price}} EGP</p>
+      </div>
+      <!-- </a> -->
+    </a>
+  </div>
+
+
+
+  <div *ngIf="loading" class="center">
+    <div class="sk-chase">
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+    </div>
+  </div>
+
 </div>
-</div>
-
-
-
-<style>
-    ul li{
-        border: 1px solid #000;
-        cursor: pointer;
-        list-style: none;
-        padding: 0 35px;
-        display: inline-block;
-        width: 200px;
-    }
-</style>

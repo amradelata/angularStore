@@ -1,127 +1,213 @@
+<div>
+  <div class="myhero">
+    <div class="center myherocontent">
+      <h1 class="heroH1  ">{{title}}
+      </h1>
+      <p class="heroP is-size-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        aliquam doloribus?
+      </p>
+
+      <a routerLink="/shop" routerLinkActive="active">Shop Now</a>
 
 
-
-<div class="hero">
-    <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd is-gapless">
-      <div class="column ">
-        <div class="offer offerone"></div>
-      </div>
-     
-    </div>
-    <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd  ">
-        <!-- is-gapless -->
-        <div class="column is-8">
-             <app-carousel></app-carousel>
-        </div>
-        <div class="column ">
-            <div class="heroImg one"></div>
-            <!-- <div class="heroImg tow"></div> -->
-        </div>
-
-    
-    </div>
-    <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd is-gapless">
-      <div class="column ">
-        <div class="offer offertwo"></div>
-      </div>
-     
     </div>
 
+
+  </div>
+
+  <!--  -->
+
+
+
+
+
+
+  <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd is-gapless">
+    <div class="column ">
+      <div class="offer offertwo"></div>
+    </div>
+
+  </div>
+
+
+  <div class="secondSection">
     <div class="dad">
       <div class="child content">
         <p class="title">Lorem ipsum </p>
         <p class="subtitle">Lorem ipsum dolor sit amet</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor
+          vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
       </div>
-      
-     <div class="child">
+
+      <div class="child">
         <div class="darikdiv">
           <img src="../../assets/img/hero/1.jpg" class="img">
         </div>
       </div>
+      <img src="../../assets/img/hero/Untitled-1.png" class="imgsid1">
+      <!-- <img src="../../assets/img/hero/Untitled-2.png" class="imgsid2"> -->
+    </div>
+  </div>
+
+
+
+
+  <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd is-gapless">
+    <div class="column ">
+      <div class="offer offerone"></div>
     </div>
 
-    <div class="level statistics columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd is-gapless">
-      <div class="level-item has-text-centered">
-        <div>
-          <p class="heading">customer</p>
-          <p class="title">456K</p>
-        </div>
-      </div>
-      <div class="level-item has-text-centered">
-        <div>
-          <p class="heading">Following</p>
-          <p class="title">123</p>
-        </div>
-      </div>
-      <div class="level-item has-text-centered">
-        <div>
-          <p class="heading">Followers</p>
-          <p class="title">456K</p>
-        </div>
-      </div>
-      <div class="level-item has-text-centered">
-        <div>
-          <p class="heading">Likes</p>
-          <p class="title">789</p>
-        </div>
+  </div>
+
+
+
+
+
+  <div
+    class="level statistics columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd is-gapless">
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">customer</p>
+        <p class="title">456K</p>
       </div>
     </div>
-
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Following</p>
+        <p class="title">123</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Followers</p>
+        <p class="title">456K</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Likes</p>
+        <p class="title">789</p>
+      </div>
+    </div>
+  </div>
 
 
 
 </div>
 
+
 <style>
-  .dad{
-  display: flex;
-  justify-content: space-around;
-    align-items: center;
+  .myhero {
+    background-image: url('../../assets/img/hero/91443.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
   }
 
-  .child.content{
+  .myherocontent {
+    font-family: 'Caveat Brush', cursive;
+    color: #fff;
+  }
+
+  .heroP {
+    margin-bottom: 20px;
+  }
+
+  .heroH1 {
+    font-size: 80px;
+  }
+
+  .dad {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  .secondSection {
+    position: relative;
+
+  }
+
+  .imgsid1 {
+
+    position: absolute;
+    left: -195px;
+    bottom: 150px;
+    z-index: -1;
+    transform: rotateZ(270deg);
+    width: 34%;
+  }
+
+  .child.content {
     width: 500px
   }
 
-  .darikdiv{
+  .darikdiv {
     position: relative;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
-  .img{
+
+  .img {
     position: absolute;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     right: 35px;
     bottom: 35px;
   }
-  .darikdiv{
+
+  .darikdiv {
     width: 300px;
     height: 500px;
-    background-color: #242f56;
+    background-color: #005075;
   }
- .statistics{
-    background-size: contain;
+
+  .myherocontent a {
+    padding: 5px 20px;
+    font-size: 25px;
     color: #fff;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 3px solid #fff;
+  }
+
+  .myherocontent a:hover {
+    /* color: rgb(13, 49, 34); */
+    background-color: #37452c;
+    border: none;
+    transition: 0.35s;
+  }
+
+
+
+  .statistics {
+
+    background-size: contain;
+    /* color: #fff; */
     background-position: center center;
-    background-image: url('../../assets/img/hero/9.jpg');
-    padding: 35px 0;
+    /* background-image: url('../../assets/img/hero/9.jpg'); */
+    padding: 100px 0;
     margin-top: 25px;
- }
-.statistics .title{
-  color: #fff;
-}
-    .heroImg{
+  }
+
+  .statistics .title {
+    /* color: #fff; */
+  }
+
+  .heroImg {
     height: 500px;
-    background-size: cover; 
+    background-size: cover;
     background-position: center center;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    }
-    .one{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .one {
     background-image: url('../../assets/img/hero/7.JPG');
 
-    }
-    .offer{
-    
+  }
+
+  .offer {
+
     /* margin: 0 10px; */
     /* padding: 50px; */
     height: 100px;
@@ -130,11 +216,16 @@
     background-repeat: no-repeat;
     background-position: center center;
     /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
-    }
-.offertwo{
-background-image: url('../../assets/img/hero/Meeza-HP-Strip-en.jpg');
-}
-.offerone{
-background-image: url('../../assets/img/hero/Countdown-web-en.gif');
-}
+  }
+
+  .offertwo {
+    background-image: url('../../assets/img/hero/Meeza-HP-Strip-en.jpg');
+    /* margin-top: 25px; */
+    margin: 100px 0;
+  }
+
+  .offerone {
+    background-image: url('../../assets/img/hero/Countdown-web-en.gif');
+    margin-top: 100px;
+  }
 </style>
