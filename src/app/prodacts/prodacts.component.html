@@ -1,12 +1,26 @@
 <div class="myshop">
   <div class="center" *ngIf="prodacts.length === 0 && !loading;">No Data Found!</div>
 
-  <!-- <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd  ">
+  <div *ngIf="loading" class=" loading">
+    <div class="center">
+      <div class="sk-chase ">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd  ">
 
     <div class="column is-12">
       <app-carousel></app-carousel>
     </div>
-  </div> -->
+  </div>
   <div class="cards">
     <a [routerLink]="['/shop', item.id]" class="card" *ngFor="
       let item of prodacts">
@@ -22,16 +36,5 @@
   </div>
 
 
-
-  <div *ngIf="loading" class="center">
-    <div class="sk-chase">
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-    </div>
-  </div>
 
 </div>
