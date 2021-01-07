@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Prodact } from './prodacts';
+import { Prodact } from './products'
 import { catchError, retry } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 
@@ -10,13 +10,13 @@ import { Observable, throwError } from 'rxjs';
 export class ProdactsService {
 
   constructor(private http: HttpClient) { }
-  getProdacts() : Observable<Prodact[]>{
+  getProdacts(): Observable<Prodact[]> {
     return this.http.get<Prodact[]>("https://vue-e-commerce-databse.herokuapp.com/products")
-    .pipe(
-      catchError(this.errorHandeler)// handle the error
-    );
+      .pipe(
+        catchError(this.errorHandeler)// handle the error
+      );
   }
-    errorHandeler(error: HttpErrorResponse){ //error function
-     return throwError('Something bad happened; please try again later.');
+  errorHandeler(error: HttpErrorResponse) { //error function
+    return throwError('Something bad happened; please try again later.');
   }
 }

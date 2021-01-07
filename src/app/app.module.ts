@@ -4,32 +4,31 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-import { CarouselComponent } from './carousel/carousel.component';
 import { MyNavComponent } from './my-nav/my-nav.component';
 import { MyHeroComponent } from './my-hero/my-hero.component';
 import { MyFooterComponent } from './my-footer/my-footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProdactsDetailComponent } from './prodacts-detail/prodacts-detail.component';
 import { UsersModule } from './users/users.module';
+import { ProductsModule } from './products/products.module';
+// import { ProductsRoutingModule } from './products/products/products-routing.module'
+
 
 @NgModule({
   declarations: [
     AppComponent,
-
-    CarouselComponent,
     MyNavComponent,
     MyHeroComponent,
     MyFooterComponent,
-    routingComponents,
     PageNotFoundComponent,
-    ProdactsDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IvyCarouselModule,
     HttpClientModule,
-    UsersModule
+    UsersModule,
+    ProductsModule,
+    // ProductsRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

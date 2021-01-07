@@ -1,0 +1,37 @@
+<div class="myshop">
+    <div class="center" *ngIf="prodacts.length === 0 && !loading;">No Data Found!</div>
+
+    <div *ngIf="loading" class=" loading">
+        <div class="center">
+            <div class="sk-chase ">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <app-productsnav></app-productsnav>
+    <app-carousel></app-carousel>
+    <div class="cards">
+        <a [routerLink]="['/shop', item.id]" class="card" *ngFor="
+          let item of prodacts">
+
+            <div class="img" [ngStyle]="{'backgroundImage':'url('+item.img_url+')'}"></div>
+            <div class="shopcontent">
+                <p class="is-size-5">{{ item.name }}</p>
+
+                <p class="is-size-5 has-text-info">{{ item.price}} EGP</p>
+            </div>
+
+        </a>
+    </div>
+
+
+
+</div>
