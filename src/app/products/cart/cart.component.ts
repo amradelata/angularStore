@@ -18,23 +18,24 @@ export class CartComponent implements OnInit {
 
   addtoquantty(index) {
     const myclickdObject = this.mylocalStorageCard[index]
-    myclickdObject[0].quantity++;
+
+    myclickdObject.quantity++;
     this.mylocalStorageQty++;
 
     this.mylocalStorageTolalPrice =
-      +this.mylocalStorageTolalPrice + +myclickdObject[0].price;
+      +this.mylocalStorageTolalPrice + +myclickdObject.price;
     // save localStorage
     this.savelocalstorage()
   }
   removefromquantty(index) {
     const myclickdObject = this.mylocalStorageCard[index]
 
-    myclickdObject[0].quantity--;
+    myclickdObject.quantity--;
     this.mylocalStorageQty--;
 
     this.mylocalStorageTolalPrice =
-      +this.mylocalStorageTolalPrice + -myclickdObject[0].price;
-    if (myclickdObject[0].quantity === 0) {
+      +this.mylocalStorageTolalPrice + -myclickdObject.price;
+    if (myclickdObject.quantity === 0) {
       this.mylocalStorageCard.splice(index, 1);
     }
     // save localStorage
@@ -48,9 +49,9 @@ export class CartComponent implements OnInit {
 
 
     this.mylocalStorageTolalPrice =
-      +this.mylocalStorageTolalPrice + -myclickdObject[0].price * myclickdObject[0].quantity;
+      +this.mylocalStorageTolalPrice + -myclickdObject.price * myclickdObject.quantity;
     this.mylocalStorageQty =
-      +this.mylocalStorageQty + -myclickdObject[0].quantity;
+      +this.mylocalStorageQty + -myclickdObject.quantity;
     // save localStorage
     this.savelocalstorage()
   }
