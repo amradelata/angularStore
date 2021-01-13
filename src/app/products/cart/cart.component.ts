@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  public edited = false;
   public mylocalStorageCard = JSON.parse(localStorage.getItem('cart'))
   public mylocalStorageTolalPrice = JSON.parse(localStorage.getItem('totalprice'))
   public mylocalStorageQty = JSON.parse(localStorage.getItem('qty'))

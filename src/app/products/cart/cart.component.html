@@ -1,34 +1,55 @@
-<p class="is-size-1">{{"Item/s In Cart"+mylocalStorageQty}}</p>
-<div class="cards">
-    <div class="card" *ngFor="
+<div>
+    <div *ngIf="mylocalStorageQty != 0 && mylocalStorageQty != null; else elseBlock">
+        <p class="is-size-1">{{"Item/s In Cart"+mylocalStorageQty}}</p>
+        <div class="cards">
+            <div class="card" *ngFor="
     let item; let index=index of mylocalStorageCard">
-        <a [routerLink]="['/shop',item.id]">
+                <a [routerLink]="['/shop',item.id]">
 
-            <div class="img" [ngStyle]="{'backgroundImage':'url('+item.img_url+')'}"></div>
-            <div class="shopcontent">
-                <p class="is-size-5">{{ item.name }}</p>
-                <p class="is-size-5">{{ item.quantity}}</p>
+                    <div class="img" [ngStyle]="{'backgroundImage':'url('+item.img_url+')'}"></div>
+                    <div class="shopcontent">
+                        <p class="is-size-5">{{ item.name }}</p>
+                        <p class="is-size-5">{{ item.quantity}}</p>
 
-                <p class="is-size-5 has-text-info">{{ item.price}} EGP</p>
+                        <p class="is-size-5 has-text-info">{{ item.price}} EGP</p>
 
+                    </div>
+
+                </a>
+
+                <div class="buttons">
+                    <button class="button is-danger" (click)="mydelete(index)"> Delete</button>
+                    <button class="button is-warning" (click)="removefromquantty(index)"> -1</button>
+                    <button class="button is-warning" (click)="addtoquantty(index)"> +1</button>
+                </div>
             </div>
-
-        </a>
-
-        <div class="buttons">
-            <button class="button is-danger" (click)="mydelete(index)"> Delete</button>
-            <button class="button is-warning" (click)="removefromquantty(index)"> -1</button>
-            <button class="button is-warning" (click)="addtoquantty(index)"> +1</button>
+            <div class="card">
+                <p class="is-size-1">
+                    {{"Tolal Price"+mylocalStorageTolalPrice}}
+                </p>
+                <button class="button is-success">Payment</button>
+            </div>
         </div>
     </div>
-    <div class="card">
-        <p class="is-size-1">
-            {{"Tolal Price"+mylocalStorageTolalPrice}}
-        </p>
-        <button class="button is-success">Payment</button>
+    <div class="empty">
+        <ng-template #elseBlock>
+            <p class="is-size-2">your cart is empty</p>
+            <img src="../../../assets/img/empty-cart-png.webp" alt="">
+            <button class="button" routerLink="/shop" routerLinkActive="active">Shop Now</button>
+        </ng-template>
     </div>
 </div>
 <style>
+    .empty {
+        /* text-align: center; */
+        display: none;
+
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+    }
+
     .buttons {
         display: block;
         padding: 5px 0;
