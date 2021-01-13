@@ -15,7 +15,7 @@ export class ProdactsComponent implements OnInit {
   constructor(private _prodactsService: ProdactsService, private router: Router) { }
 
   ngOnInit(): void {
-    this.loading = true;
+    this.loading = true; //show loading
     this._prodactsService.getProdacts().subscribe(
       (data) => {
         this.prodacts = data;

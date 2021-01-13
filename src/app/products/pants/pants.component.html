@@ -1,5 +1,43 @@
-<!-- <app-carousel></app-carousel>
+<app-productsnav></app-productsnav>
+<app-carousel></app-carousel>
 
-<app-productsnav></app-productsnav> -->
 
-<p>pants works!</p>
+
+<div class="cards">
+    <a [routerLink]="['/shop', item.id]" class="card" *ngFor="
+      let item of mycategory">
+
+        <div class="img" [ngStyle]="{'backgroundImage':'url('+item.img_url+')'}"></div>
+        <div class="shopcontent">
+            <p class="is-size-5">{{ item.name }}</p>
+
+            <p class="is-size-5 has-text-info">{{ item.price}} EGP</p>
+        </div>
+
+    </a>
+</div>
+
+
+<style>
+    .cards {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .card {
+        width: calc(20% - 20px);
+        margin: 9px;
+        border: 1px solid #95afc0;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .img {
+        height: 250px;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+</style>

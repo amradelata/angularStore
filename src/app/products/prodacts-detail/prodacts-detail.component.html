@@ -1,4 +1,6 @@
-<div class="singleproduct">
+<div class="singleproduct" *ngFor="
+let item of singleProduct">
+
     <div class="halfdev">
         <div class="singlimg" [ngStyle]="{'backgroundImage':'url('+singleProduct[0].img_url+')'}"></div>
     </div>
@@ -8,9 +10,11 @@
             <p class="is-size-6">{{singleProduct[0].description}}</p>
             <span class="price is-size-3">{{singleProduct[0].price + ' EGP'}}</span>
 
-            <button class="button is-success" routerLink="/cart">add to cart</button>
+            <button routerLink="/cart" class="button is-success" (click)="addTocrd()">add to cart</button>
+
 
 
         </div>
     </div>
+
 </div>

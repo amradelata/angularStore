@@ -17,7 +17,8 @@ import { BlazerComponent } from './blazer/blazer.component';
 import { ProdactsComponent } from './products/products.component';
 import { ProductsnavComponent } from '../products/productsnav/productsnav.component';
 import { CarouselComponent } from '../products/carousel/carousel.component'
-import { ProdactsDetailComponent } from '../products/prodacts-detail/prodacts-detail.component'
+import { ProdactsDetailComponent } from '../products/prodacts-detail/prodacts-detail.component';
+import { CartComponent } from './cart/cart.component'
 
 
 
@@ -33,7 +34,8 @@ import { ProdactsDetailComponent } from '../products/prodacts-detail/prodacts-de
     ProdactsComponent,
     ProductsnavComponent,
     CarouselComponent,
-    ProdactsDetailComponent
+    ProdactsDetailComponent,
+    CartComponent
 
   ]
 

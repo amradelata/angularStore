@@ -1,0 +1,59 @@
+<p class="is-size-1">{{"Item/s In Cart"+mylocalStorageQty}}</p>
+<div class="cards">
+    <div class="card" *ngFor="
+    let item; let index=index of mylocalStorageCard">
+        <a [routerLink]="['/shop',item.id]">
+
+            <div class="img" [ngStyle]="{'backgroundImage':'url('+item.img_url+')'}"></div>
+            <div class="shopcontent">
+                <p class="is-size-5">{{ item.name }}</p>
+                <p class="is-size-5">{{ item.quantity}}</p>
+
+                <p class="is-size-5 has-text-info">{{ item.price}} EGP</p>
+
+            </div>
+
+        </a>
+
+        <div class="buttons">
+            <button class="button is-danger" (click)="mydelete(index)"> Delete</button>
+            <button class="button is-warning" (click)="removefromquantty(index)"> -1</button>
+            <button class="button is-warning" (click)="addtoquantty(index)"> +1</button>
+        </div>
+    </div>
+    <div class="card">
+        <p class="is-size-1">
+            {{"Tolal Price"+mylocalStorageTolalPrice}}
+        </p>
+        <button class="button is-success">Payment</button>
+    </div>
+</div>
+<style>
+    .buttons {
+        display: block;
+        padding: 5px 0;
+        background-color: cornsilk;
+    }
+
+    .cards {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .card {
+        width: calc(50% - 20px);
+        margin: 9px;
+        border: 1px solid #95afc0;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .img {
+        height: 100px;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+</style>

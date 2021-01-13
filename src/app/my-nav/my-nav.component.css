@@ -3,15 +3,18 @@
     /* position: fixed;
     right: 0;
     left: 0; */
-    background-color: #0000007c;
+    background-color: #0000005d;
     /* z-index: 99999999; */
+
   }
 
   a {
     color: #fff;
     font-weight: bolder;
+    text-shadow: black;
+    text-shadow: -1px 5px 4px rgba(0,0,0,1);
   }
 
   a:hover {
-    color: rgb(195, 195, 195);
+    color:#37452c
   }
